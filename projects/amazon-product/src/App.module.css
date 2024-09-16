@@ -1,0 +1,148 @@
+body {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.Topbar {
+  width: 100%;
+  background-color: #282c34;
+  padding: 24px 48px 2px;
+  text-align: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.Topbar > img {
+  width: 100px;
+  color: white;
+}
+
+.MainContainer {
+  padding: 4% 12%;
+  margin-top: 32px;
+  box-sizing: border-box;
+
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.ProductPreview {
+  width: 50%;
+  position: relative;
+}
+
+.TimeSection {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: white;
+  font-size: 48px;
+  font-weight: 600;
+}
+
+.HeartRateSection {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: white;
+  font-size: 48px;
+  font-weight: 600;
+}
+
+.HeartRateSection > i {
+  color: red;
+  animation: beat 1s infinite;
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.2, 1.2);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.HeartRateSection > p {
+  margin-top: 20px;
+}
+
+.ProductPreview > img {
+  width: 100%;
+}
+
+.ProductData {
+  width: 50%;
+}
+
+.ProductTitle {
+  font-size: 48px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.ProductDescription {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.8);
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.SectionHeader {
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.ProductImage {
+  width: 100%;
+  max-width: 100px;
+
+  border: 2px solid transparent;
+  border-radius: 10px;
+  margin-right: 12px;
+  cursor: pointer;
+}
+
+.SelectedProductImage {
+  border: 5px solid teal;
+}
+
+.FeatureItem {
+  font-size: 20px;
+  background-color: gainsboro;
+  border-radius: 10px;
+  border: 0;
+  min-width: 80px;
+  padding: 12px 24px;
+  margin-right: 15px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 500;
+  box-sizing: content-box;
+}
+
+.SelectedFeatureItem {
+  color: white;
+  background-color: gray;
+}
+
+.PrimaryButton {
+  font-size: 20px;
+  color: white;
+  background-color: teal;
+  padding: 12px 24px;
+  border: 0;
+  border-radius: 10px;
+  margin-top: 36px;
+  cursor: pointer;
+}
