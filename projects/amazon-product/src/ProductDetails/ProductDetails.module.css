@@ -1,26 +1,7 @@
-body {
-  font-family: "Source Sans Pro", sans-serif;
-}
-
-.MainContainer {
-  padding: 4% 12%;
-  margin-top: 32px;
-  box-sizing: border-box;
-
+.ProductDetails {
   width: 100%;
-  display: flex;
-  align-items: center;
 }
 
-.ProductPreviewWrapper {
-  width: 50%;
-  position: relative;
-}
-
-.ProductDetailsWrapper {
-  width: 50%;
-}
-/*
 .ProductTitle {
   font-size: 48px;
   font-weight: 600;
@@ -83,4 +64,3 @@ body {
   margin-top: 36px;
   cursor: pointer;
 }
-*/
