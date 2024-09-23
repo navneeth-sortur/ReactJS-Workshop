@@ -4,7 +4,7 @@ import classes from "./ProductDetails.module.css";
 const ProductDetails = props => {
   const colorOptions = props.data.colorOptions.map((item, pos) => {
     const classArr = [classes.ProductImage];
-    if (pos === 0) {
+    if (pos === props.currentPreviewImagePos) {
       classArr.push(classes.SelectedProductImage);
     }
     return (
@@ -13,17 +13,22 @@ const ProductDetails = props => {
         className={classArr.join(" ")}
         src={item.imageUrl}
         alt={item.styleName}
+        onClick={() => props.onColorOptionClicked(pos)}
       ></img>
     );
   });
 
   const featureList = props.data.featureList.map((item, pos) => {
     const classArr = [classes.FeatureItem];
-    if (pos === 0) {
+    if (pos === props.currentSelectedFeature) {
       classArr.push(classes.SelectedFeatureItem);
     }
     return (
-      <button key={pos} className={classArr.join(" ")}>
+      <button
+        key={pos}
+        className={classArr.join(" ")}
+        onClick={() => props.onFeatureListClicked(pos)}
+      >
         {item}
       </button>
     );

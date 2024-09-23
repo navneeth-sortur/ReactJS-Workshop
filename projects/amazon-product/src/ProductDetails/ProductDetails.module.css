@@ -23,7 +23,7 @@
 
 .ProductImage {
   width: 50%;
-  max-width: 50px;
+  max-width: 100px;
 
   border: 2px solid transparent;
   border-radius: 10px;

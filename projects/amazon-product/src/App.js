@@ -8,8 +8,16 @@ import ProductData from "./utils/productData";
 class App extends Component {
   state = {
     productData: ProductData,
-    currentPreviewImage: "https://imgur.com/iOeUBV7.png",
-    showHeartBeatSection: false
+    currentPreviewImagePos: 0,
+    currentSelectedFeature: 0
+  };
+
+  onColorOptionClicked = pos => {
+    this.setState({ currentPreviewImagePos: pos });
+  };
+
+  onFeatureListClicked = pos => {
+    this.setState({ currentSelectedFeature: pos });
   };
 
   render() {
@@ -20,13 +28,23 @@ class App extends Component {
         <div className={classes.MainContainer}>
           <div className={classes.ProductPreviewWrapper}>
             <ProductPreview
-              currentPreviewImage={this.state.currentPreviewImage}
-              showHeartBeatSection={this.state.showHeartBeatSection}
+              currentPreviewImage={
+                this.state.productData.colorOptions[
+                  this.state.currentPreviewImagePos
+                ].imageUrl
+              }
+              currentSelectedFeature={this.state.currentSelectedFeature}
             ></ProductPreview>
           </div>
 
           <div className={classes.ProductDetailsWrapper}>
-            <ProductDetails data={this.state.productData}></ProductDetails>
+            <ProductDetails
+              data={this.state.productData}
+              onColorOptionClicked={this.onColorOptionClicked}
+              currentPreviewImagePos={this.state.currentPreviewImagePos}
+              onFeatureListClicked={this.onFeatureListClicked}
+              currentSelectedFeature={this.state.currentSelectedFeature}
+            ></ProductDetails>
           </div>
         </div>
       </div>
