@@ -13,14 +13,26 @@ class App extends Component {
   };
 
   onColorOptionClicked = pos => {
-    this.setState({ currentPreviewImagePos: pos });
+    if (this.state.currentPreviewImagePos !== pos) {
+      this.setState({ currentPreviewImagePos: pos });
+    }
   };
 
   onFeatureListClicked = pos => {
     this.setState({ currentSelectedFeature: pos });
   };
 
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   if (
+  //     nextState.currentPreviewImagePos === this.state.currentPreviewImagePos
+  //   ) {
+  //     return false;
+  //   }
+  //   return true;
+  // }
+
   render() {
+    console.log("Inside render");
     return (
       <div className="App">
         <Topbar></Topbar>

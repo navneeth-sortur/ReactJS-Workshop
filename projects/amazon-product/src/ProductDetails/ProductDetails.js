@@ -39,43 +39,9 @@ const ProductDetails = props => {
       <p className={classes.ProductDescription}>{props.data.description}</p>
 
       <h3 className={classes.SectionHeader}>Select Color</h3>
-      <div>
-        {colorOptions}
-        {/*<img
-          className={[classes.ProductImage, classes.SelectedProductImage].join(
-            " "
-          )}
-          src="https://imgur.com/iOeUBV7.png"
-          alt="black_product_image"
-        ></img>
-        <img
-          className={classes.ProductImage}
-          src="https://imgur.com/PTgQlim.png"
-          alt="red_product_image"
-        ></img>
-        <img
-          className={classes.ProductImage}
-          src="https://imgur.com/Mplj1YR.png"
-          alt="blue_product_image"
-        ></img>
-        <img
-          className={classes.ProductImage}
-          src="https://imgur.com/xSIK4M8.png"
-          alt="purple_product_image"
-          ></img>*/}
-      </div>
+      <div>{colorOptions}</div>
       <h3 className={classes.SectionHeader}>Features</h3>
-      <div>
-        {featureList}
-        {/*<button
-          className={[classes.FeatureItem, classes.SelectedFeatureItem].join(
-            " "
-          )}
-        >
-          Time
-        </button>
-        <button className={classes.FeatureItem}>Heart Rate</button>*/}
-      </div>
+      <div>{featureList}</div>
 
       <button className={classes.PrimaryButton}>Buy Now</button>
     </div>
