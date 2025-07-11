@@ -1,0 +1,18 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.contentWrapper {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.countDisplay {
+  height: 200px;
+}
+
+.btnContainer {
+  height: 100px;
+}
