@@ -1,0 +1,29 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.app-container {
+  border: 5px solid aquamarine;
+  border-radius: 16px;
+  padding: 20px 32px;
+  margin: 20px;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 501px;
+}
+
+.dark-theme {
+  background-color: #333;
+  color: #fff;
+}
+
+.light-theme {
+  background-color: #fff;
+  color: #333;
+}
