@@ -1,22 +1,32 @@
-body {
-  font-family: "Source Sans Pro", sans-serif;
-}
-
 .MainContainer {
-  padding: 4% 12%;
-  margin-top: 32px;
-  box-sizing: border-box;
-
   width: 100%;
+  padding: 4% 8%;
+  margin-top: 32px;
+
   display: flex;
-  align-items: center;
+  gap: 32px;
+  align-items: flex-start;
+
+  box-sizing: border-box;
 }
 
 .ProductPreviewWrapper {
-  width: 50%;
+  flex: 1;
   position: relative;
 }
 
 .ProductDetailsWrapper {
-  width: 50%;
+  flex: 1;
+}
+
+@media (max-width: 900px) {
+  .MainContainer {
+    flex-direction: column;
+    padding: 6% 5%;
+  }
+
+  .ProductPreviewWrapper,
+  .ProductDetailsWrapper {
+    width: 100%;
+  }
 }

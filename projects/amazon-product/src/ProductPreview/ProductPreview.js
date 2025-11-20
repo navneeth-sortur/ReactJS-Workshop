@@ -1,17 +1,19 @@
 import React from "react";
 import classes from "./ProductPreview.module.css";
 
-const ProductPreview = props => {
-  let currentHour = new Date().getHours();
-  const displayHour = currentHour > 9 ? currentHour : "0" + currentHour;
-  let currentMinute = new Date().getMinutes();
-  const displayMinute = currentMinute > 9 ? currentMinute : "0" + currentMinute;
+const ProductPreview = ({ currentPreviewImage, currentSelectedFeature }) => {
+  const now = new Date();
+
+  const displayHour = String(now.getHours()).padStart(2, "0");
+  const displayMinute = String(now.getMinutes()).padStart(2, "0");
+
+  const isHeartRateActive = currentSelectedFeature === 1;
 
   return (
     <div className={classes.ProductPreview}>
-      <img src={props.currentPreviewImage} alt="product_image"></img>
+      <img src={currentPreviewImage} alt="product_image" />
 
-      {props.currentSelectedFeature === 1 ? (
+      {isHeartRateActive ? (
         <div className={classes.HeartRateSection}>
           <i className="fa-solid fa-heart-pulse"></i>
           <p>78</p>

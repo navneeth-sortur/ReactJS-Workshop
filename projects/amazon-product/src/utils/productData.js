@@ -1,4 +1,5 @@
-const ProductData = {
+// Static product configuration for the FitBit watch
+export const ProductData = Object.freeze({
   title: "FitBit 19 - The Smartest Watch",
   description:
     "Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor.",
@@ -21,8 +22,4 @@ const ProductData = {
     }
   ],
   featureList: ["Time", "Heart Rate"]
-};
-
-Object.freeze(ProductData); //This line of code just makes your object as a constant. No values can be updated.
-
-export default ProductData;
+});
