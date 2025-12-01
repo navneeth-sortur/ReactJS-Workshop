@@ -1,12 +1,17 @@
-# React + Vite
+# User Feed with Infinite Scroll & Shimmer Loading
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React-based user feed application that fetches random user profiles from the **Random User API** and displays them in responsive Bootstrap cards.  
+This project includes a **production-quality infinite scroll feature** powered by the Intersection Observer API, allowing more users to load automatically as you scroll.
 
-Currently, two official plugins are available:
+To enhance the user experience, the project also implements **Shimmer skeleton loaders** for both the initial load and subsequent page loads, creating a smooth and modern feel.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### **Tech Stack**
 
-## Expanding the ESLint configuration
+- **React** (Hooks-based architecture)
+- **Axios** for API requests
+- **Bootstrap** for layout & styling
+- **Intersection Observer API** for infinite scroll
+- **Custom Hooks** (`useInfiniteScroll`)
+- **CSS Shimmer Skeleton Loaders**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+A lightweight and modern mini-project to understand infinite scrolling, API pagination, custom hooks, and clean UI loading states in React.
