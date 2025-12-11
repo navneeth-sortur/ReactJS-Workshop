@@ -1,6 +1,7 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import OtpInput from "./OtpInput";
+import { vi } from "vitest";
 
 describe("OtpInput Component", () => {
   test("renders correct number of inputs", () => {
@@ -21,7 +22,7 @@ describe("OtpInput Component", () => {
   });
 
   test("updates OTP value when typing", () => {
-    const handleChange = jest.fn();
+    const handleChange = vi.fn();
 
     render(
       <OtpInput
@@ -43,7 +44,7 @@ describe("OtpInput Component", () => {
   });
 
   test("moves focus to next input when typing", () => {
-    const handleChange = jest.fn();
+    const handleChange = vi.fn();
 
     render(
       <OtpInput
@@ -66,7 +67,7 @@ describe("OtpInput Component", () => {
   });
 
   test("moves focus to previous input on backspace when empty", () => {
-    const handleChange = jest.fn();
+    const handleChange = vi.fn();
 
     render(
       <OtpInput
@@ -81,6 +82,7 @@ describe("OtpInput Component", () => {
     );
 
     const inputs = screen.getAllByRole("textbox");
+    console.log("🚀 ~ inputs:", inputs);
 
     inputs[1].focus();
     fireEvent.keyDown(inputs[1], { key: "Backspace" });
@@ -89,7 +91,7 @@ describe("OtpInput Component", () => {
   });
 
   test("blocks alphabetic input when isInputNum=true", () => {
-    const handleChange = jest.fn();
+    const handleChange = vi.fn();
 
     render(
       <OtpInput
@@ -112,7 +114,7 @@ describe("OtpInput Component", () => {
   });
 
   test("handles paste full OTP correctly", () => {
-    const handleChange = jest.fn();
+    const handleChange = vi.fn();
 
     render(
       <OtpInput
@@ -136,7 +138,7 @@ describe("OtpInput Component", () => {
   });
 
   test("trims pasted OTP if longer than allowed", () => {
-    const handleChange = jest.fn();
+    const handleChange = vi.fn();
 
     render(
       <OtpInput
